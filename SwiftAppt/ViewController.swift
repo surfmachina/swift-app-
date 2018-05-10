@@ -13,31 +13,26 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var MyLabel: UILabel!
     
-    var tapcount = 0
+    @IBOutlet weak var number1: UITextField!
+    
+    @IBOutlet weak var number2: UITextField!
     
     @IBAction func ButtonPush(_ sender: Any) {
-        if MyLabel.text == "I'm set" {
-            print("button pushed twice")
-        } else {
-            MyLabel.text = "I'm set"
-            print("button now says I'm set")
-        }
 
+        print(number1.text!)
+        print(number2.text!)
+        
+        MyLabel.text = "Answer is: \(Double(number1.text!)! + Double(number2.text!)!)"
         
     }
     
     @IBAction func NewButton(_ sender: Any) {
-        MyLabel.text = "Buttons are cool"
-        print("button says Buttons are cool")
-        tapcount = tapcount + 1
+
+        print(number1.text!)
+        print(number2.text!)
         
-        if tapcount >= 10 {
-            print("you have tapped the button 10x")
-            MyLabel.text = "you have tapped the button 10x"
-        } else {
-             print(tapcount)
-        }
-        
+        MyLabel.text = "Answer is: \(Double(number1.text!)! - Double(number2.text!)!)"
+
     }
     
     
